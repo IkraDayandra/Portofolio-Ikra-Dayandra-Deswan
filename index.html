@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Computer Science graduate specializing in Laravel & MySQL web development. Currently Web Developer Intern at PERURI with experience in building robust internal applications and technical support.">
+    <meta name="keywords" content="Ikra Dayandra Deswan, Web Developer, Laravel Developer, PHP Developer, MySQL, React Developer, BINUS University, Jakarta Web Developer, Full-stack Developer, Technical Support">
+    <meta name="author" content="Ikra Dayandra Deswan">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ikradayandra.com/">
+    <meta property="og:title" content="Ikra Dayandra Deswan | Web Developer Portfolio">
+    <meta property="og:description" content="Computer Science graduate specializing in Laravel & MySQL web development.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Ikra Dayandra Deswan | Web Developer Portfolio">
+    <meta property="twitter:description" content="Computer Science graduate specializing in Laravel & MySQL web development.">
+    
+    <title>Ikra Dayandra Deswan | Web Developer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                        accent: '#f97316',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#home" class="text-xl font-bold text-gray-900 hover:text-primary transition-colors">
+                    ID<span class="text-primary">.</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-sm font-medium text-gray-600 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-gray-600 hover:text-primary transition-colors">About</a>
+                    <a href="#experience" class="nav-link text-sm font-medium text-gray-600 hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects" class="nav-link text-sm font-medium text-gray-600 hover:text-primary transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link text-sm font-medium text-gray-600 hover:text-primary transition-colors">Skills</a>
+                    <a href="#education" class="nav-link text-sm font-medium text-gray-600 hover:text-primary transition-colors">Education</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <!-- Language Toggle -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <button id="lang-en" class="lang-btn px-3 py-1 text-sm font-medium text-white bg-primary rounded-md transition-colors">
+                        EN
+                    </button>
+                    <button id="lang-id" class="lang-btn px-3 py-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+                        ID
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4 space-y-2">
+                <a href="#home" class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">Home</a>
+                <a href="#about" class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">About</a>
+                <a href="#experience" class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">Experience</a>
+                <a href="#projects" class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">Projects</a>
+                <a href="#skills" class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">Skills</a>
+                <a href="#education" class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">Education</a>
+                <a href="#contact" class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">Contact</a>
+                <div class="flex items-center space-x-2 px-4 pt-2">
+                    <button class="mobile-lang-btn px-3 py-1 text-sm font-medium text-white bg-primary rounded-md" data-lang="en">EN</button>
+                    <button class="mobile-lang-btn px-3 py-1 text-sm font-medium text-gray-600" data-lang="id">ID</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Profile Image Placeholder -->
+                <div class="mb-8 animate-fade-in">
+                    <div class="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-xl">
+                        ID
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+                    Ikra Dayandra Deswan
+                </h1>
+                
+                <p class="text-xl sm:text-2xl text-gray-600 mb-6 animate-fade-in-up animation-delay-100">
+                    Web Developer | Laravel & MySQL Specialist | React Enthusiast
+                </p>
+                
+                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+                    Computer Science graduate building robust web applications and bridging the gap between users and systems.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-300">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+                        Get In Touch
+                    </a>
+                    <a href="CV-IKRA DAYANDRA DESWAN.pdf" download="Ikra_Dayandra_Deswan_CV.pdf" class="w-full sm:w-auto px-8 py-3 bg-white text-primary font-medium rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+                        Download CV
+                    </a>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="mt-16 animate-bounce">
+                    <a href="#about" class="inline-block text-gray-400 hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- About Text -->
+                    <div class="space-y-6">
+                        <div id="about-text" class="prose prose-lg max-w-none text-gray-600">
+                            <p>I'm a Computer Science graduate from BINUS University with a strong foundation in web development and technical support. Currently working as a Web Developer Intern at PERURI (Perusahaan Umum Percetakan Uang Republik Indonesia), where I develop and maintain internal applications that serve hundreds of users daily.</p>
+                            
+                            <p>My approach combines technical proficiency with a user-focused mindset. I believe great software isn't just about clean code—it's about solving real problems and making systems accessible to everyone.</p>
+                            
+                            <p>With experience in full-stack development using Laravel and MySQL, I'm also expanding my skill set with React to build more dynamic, modular interfaces. Beyond coding, I enjoy troubleshooting, writing clear documentation, and ensuring smooth user experiences.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Current Focus</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-600">Building scalable web applications with Laravel & MySQL</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-600">Developing reusable React components for modern UIs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-600">Improving system monitoring and internal tooling</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-600">Growing expertise in endpoint management and technical support</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Highlights -->
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-4xl mb-4">🌉</div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Bridge Between Users & Systems</h3>
+                            <p class="text-gray-600">Translating technical requirements into user-friendly solutions while ensuring system reliability and performance.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-4xl mb-4">📋</div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Documentation & Validation</h3>
+                            <p class="text-gray-600">Creating comprehensive documentation and thorough testing protocols to maintain code quality and knowledge transfer.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-4xl mb-4">🔧</div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Troubleshooting Mindset</h3>
+                            <p class="text-gray-600">Proactive problem-solving approach to identify issues early and implement effective, lasting solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Professional Experience</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                
+                <div id="experience-container" class="space-y-8">
+                    <!-- Experience items will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Internal applications and systems I've built to solve real business problems. 
+                        Due to confidentiality agreements, source code cannot be shared publicly.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1: Attendance Dashboard -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <h3 class="text-xl font-bold text-gray-900">Attendance Monitoring Dashboard</h3>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full mb-4">
+                                Internal Project · Cannot Share Repo
+                            </span>
+                            <p class="text-gray-600 mb-4">Real-time employee attendance tracking system handling 500+ daily records with automated reporting.</p>
+                            
+                            <div class="mb-4">
+                                <h4 class="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>Real-time tracking & notifications</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>Role-based dashboard views</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>Automated reports (PDF/Excel)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Laravel</span>
+                                <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">MySQL</span>
+                                <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Bootstrap</span>
+                                <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Chart.js</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-sm text-gray-900 font-medium">Impact: 80% time reduction</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: Visitor Log -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <h3 class="text-xl font-bold text-gray-900">Visitor Log System</h3>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full mb-4">
+                                Internal Project · Cannot Share Repo
+                            </span>
+                            <p class="text-gray-600 mb-4">Secure digital visitor management replacing traditional logbooks with QR codes and photo capture.</p>
+                            
+                            <div class="mb-4">
+                                <h4 class="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>Digital registration & photo capture</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>QR code check-in system</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>Real-time host notifications</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">Laravel</span>
+                                <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">MySQL</span>
+                                <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">Tailwind</span>
+                                <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">Alpine.js</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-sm text-gray-900 font-medium">Impact: 100% tracking compliance</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: Monitoring Tools -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <h3 class="text-xl font-bold text-gray-900">Internal Monitoring Tools</h3>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full mb-4">
+                                Internal Project · Cannot Share Repo
+                            </span>
+                            <p class="text-gray-600 mb-4">Centralized dashboard providing real-time insights into application performance and server health.</p>
+                            
+                            <div class="mb-4">
+                                <h4 class="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>Server performance metrics</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>Uptime monitoring & alerts</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        <span>API health checks</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded">Laravel</span>
+                                <span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded">React</span>
+                                <span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded">Redis</span>
+                                <span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded">Chart.js</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-sm text-gray-900 font-medium">Impact: 95% downtime reduction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        A comprehensive toolkit for building robust, user-friendly web applications
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Backend Development -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-3">⚙️</div>
+                            <h3 class="text-xl font-bold text-gray-900">Backend Development</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Laravel (PHP)</span>
+                                    <span class="text-xs text-primary font-semibold">Advanced</span>
+                                </div>
+                                <p class="text-sm text-gray-600">MVC, Eloquent ORM, middleware</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">RESTful API Design</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Building and consuming APIs</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Server-side Logic</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Business logic, validation</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Frontend Development -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-3">🎨</div>
+                            <h3 class="text-xl font-bold text-gray-900">Frontend Development</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">React</span>
+                                    <span class="text-xs text-green-600 font-semibold">Learning</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Components, hooks, state</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">HTML5 & CSS3</span>
+                                    <span class="text-xs text-primary font-semibold">Advanced</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Semantic, responsive design</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">JavaScript (ES6+)</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">DOM, async/await, fetch</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Bootstrap & Tailwind</span>
+                                    <span class="text-xs text-primary font-semibold">Advanced</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Responsive utilities, themes</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Database & Data -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-3">🗄️</div>
+                            <h3 class="text-xl font-bold text-gray-900">Database & Data</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">MySQL</span>
+                                    <span class="text-xs text-primary font-semibold">Advanced</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Complex queries, optimization</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Database Design</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Normalization, relationships</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Query Optimization</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Performance tuning, indexes</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tools & Workflow -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-3">🛠️</div>
+                            <h3 class="text-xl font-bold text-gray-900">Tools & Workflow</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Git & GitHub</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Version control, branching</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">VS Code</span>
+                                    <span class="text-xs text-primary font-semibold">Advanced</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Extensions, debugging</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Composer & npm</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Dependency management</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Postman</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">API testing, documentation</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Support & Operations -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-3">🤝</div>
+                            <h3 class="text-xl font-bold text-gray-900">Support & Operations</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Technical Support</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Troubleshooting, diagnostics</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Documentation</span>
+                                    <span class="text-xs text-primary font-semibold">Advanced</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Technical writing, guides</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">System Monitoring</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Performance, error logging</p>
+                            </li>
+                            <li>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-gray-900 font-medium">Testing & QA</span>
+                                    <span class="text-xs text-blue-600 font-semibold">Intermediate</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Validation, bug tracking</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Education</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-6">
+                            <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center text-white text-2xl font-bold">
+                                🎓
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Computer Science</h3>
+                            <p class="text-lg text-gray-700 mb-4">BINUS University</p>
+                            <p class="text-gray-600 mb-4">August 2019 - October 2024 · Jakarta, Indonesia</p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <p class="text-sm text-gray-700 font-medium mb-2">Highlights:</p>
+                                    <ul class="space-y-1 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <span class="text-primary mr-2">•</span>
+                                            <span>Minor: Frontend Development & UI/UX</span>
+                                        </li>
+                                        <!-- <li class="flex items-start">
+                                            <span class="text-primary mr-2">•</span>
+                                            <span>GPA: 2.67/4.00</span>
+                                        </li> -->
+                                        <li class="flex items-start">
+                                            <span class="text-primary mr-2">•</span>
+                                            <span>Hardware operations contributor</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-700 font-medium mb-2">Focus Areas:</p>
+                                    <ul class="space-y-1 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <span class="text-primary mr-2">•</span>
+                                            <span>Full-stack web development</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-primary mr-2">•</span>
+                                            <span>UI design principles</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-primary mr-2">•</span>
+                                            <span>Database management systems</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <p class="text-sm text-gray-700 font-medium mb-2">Relevant Coursework:</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-white text-gray-700 text-xs font-medium rounded-full">Web Programming</span>
+                                    <span class="px-3 py-1 bg-white text-gray-700 text-xs font-medium rounded-full">Database Systems</span>
+                                    <!-- <span class="px-3 py-1 bg-white text-gray-700 text-xs font-medium rounded-full">Software Engineering</span> -->
+                                    <span class="px-3 py-1 bg-white text-gray-700 text-xs font-medium rounded-full">HCI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Let's Work Together</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        I'm always open to discussing web development projects, technical support roles, or collaboration opportunities.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <!-- Email -->
+                    <a href="mailto:ikradayandra@gmail.com" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow text-center group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
+                            <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                        <p class="text-sm text-gray-600">ikradayandra@gmail.com</p>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/ikra-dayandra-deswan" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow text-center group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
+                            <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">LinkedIn</h3>
+                        <p class="text-sm text-gray-600">Ikra Dayandra Deswan</p>
+                    </a>
+                    
+                    <!-- Location -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Location</h3>
+                        <p class="text-sm text-gray-600">Jakarta Selatan, Indonesia</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="What would you like to discuss?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none" placeholder="Tell me about your project or inquiry..."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full px-8 py-4 bg-primary text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p class="text-gray-600">
+                        <span class="font-medium">Currently open to</span> full-time opportunities and freelance projects
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-sm text-gray-400">© 2025 Ikra Dayandra Deswan. All rights reserved.</p>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:ikradayandra@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">Email</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/ikra-dayandra-deswan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="text-center mt-4">
+                <p class="text-xs text-gray-500">Built with ❤️ using HTML + Tailwind CSS + JavaScript</p>
+            </div> -->
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
