@@ -13,7 +13,7 @@ const portfolioData = {
                 location: "Jakarta Selatan, Indonesia",
                 description: "Working in the Internal Application Development Section under the IT Division, developing and maintaining critical internal systems that streamline operations across the organization.",
                 responsibilities: [
-                    "Developed attendance monitoring dashboard using Laravel (PHP) and MySQL, handling 500+ daily records",
+                    "Developed attendance monitoring dashboard using Laravel (PHP) and MySQL",
                     "Built visitor log system with role-based access control and real-time tracking capabilities",
                     "Created internal monitoring tools for system health checks and performance metrics",
                     "Designed responsive UIs using HTML/CSS with Bootstrap and Tailwind CSS frameworks",
@@ -71,7 +71,7 @@ const portfolioData = {
                 location: "Jakarta Selatan, Indonesia",
                 description: "Bekerja di Seksi Pengembangan Aplikasi Internal di bawah Divisi TI, mengembangkan dan memelihara sistem internal kritis yang menyederhanakan operasi di seluruh organisasi.",
                 responsibilities: [
-                    "Mengembangkan dashboard monitoring absensi menggunakan Laravel (PHP) dan MySQL, menangani 500+ record harian",
+                    "Mengembangkan dashboard monitoring absensi menggunakan Laravel (PHP) dan MySQL",
                     "Membangun sistem visitor log dengan role-based access control dan kemampuan tracking real-time",
                     "Membuat internal monitoring tools untuk health checks sistem dan metrik performa",
                     "Mendesain UI responsif menggunakan HTML/CSS dengan framework Bootstrap dan Tailwind CSS",
