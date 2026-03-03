@@ -77,7 +77,7 @@ export default function Hero() {
                         Get in touch
                     </a>
                     <a
-                        href="/cv-ikra-dayandra-deswan.pdf"
+                        href={`${import.meta.env.BASE_URL}cv-ikra-dayandra-deswan.pdf`}
                         download
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700
                        bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-sm

@@ -8,7 +8,7 @@ const fadeUp = {
 };
 
 export default function ExperienceCard({ exp, index }) {
-    const [expanded, setExpanded] = useState(index === 0);
+    const [expanded, setExpanded] = useState(false);
 
     return (
         <motion.div
@@ -97,7 +97,7 @@ export default function ExperienceCard({ exp, index }) {
                             {exp.certificateFile && (
                                 <div className="mt-4">
                                     <a
-                                        href={exp.certificateFile}
+                                        href={`${import.meta.env.BASE_URL}${exp.certificateFile.replace(/^\//, '')}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold
