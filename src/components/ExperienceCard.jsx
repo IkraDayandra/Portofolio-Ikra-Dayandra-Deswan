@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Calendar, ChevronDown, ChevronUp, Briefcase, FileText } from 'lucide-react';
+import { MapPin, Calendar, ChevronDown, ChevronUp, Briefcase, FileText, ExternalLink } from 'lucide-react';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 24 },
@@ -108,6 +108,25 @@ export default function ExperienceCard({ exp, index }) {
                                     >
                                         <FileText size={13} />
                                         {exp.certificateLabel || 'View Certificate'}
+                                    </a>
+                                </div>
+                            )}
+
+                            {/* Portfolio Link button */}
+                            {exp.portfolioLink && (
+                                <div className="mt-4">
+                                    <a
+                                        href={exp.portfolioLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold
+                               border border-indigo-200 dark:border-indigo-700
+                               text-indigo-600 dark:text-indigo-400
+                               hover:bg-indigo-50 dark:hover:bg-indigo-900/30
+                               transition-all duration-200"
+                                    >
+                                        <ExternalLink size={13} />
+                                        {exp.portfolioLabel || 'View Portfolio'}
                                     </a>
                                 </div>
                             )}

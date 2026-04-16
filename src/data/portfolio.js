@@ -110,6 +110,8 @@ export const experiences = [
             'Created basic web interfaces for internal use',
         ],
         technologies: ['PHP', 'CSS', 'HTML', 'JavaScript'],
+        portfolioLink: 'https://ikradayandra.github.io/LGNG-Coffee/',
+        portfolioLabel: 'View Web Coffee Portfolio',
     },
 ];
 
