@@ -133,7 +133,7 @@ export const projects = [
         description:
             'Streamlined visitor recording with searchable, structured logs for internal tracking. Includes data export and filtering features.',
         technologies: ['Laravel', 'MySQL', 'Tailwind CSS'],
-        link: '#',
+        link: 'https://ikradayandra.github.io/buku-tamu/',
         featured: true,
     },
     {
