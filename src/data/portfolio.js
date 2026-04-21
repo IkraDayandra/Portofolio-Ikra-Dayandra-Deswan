@@ -123,7 +123,7 @@ export const projects = [
         description:
             'Internal dashboard to monitor attendance and lateness trends across departments, improving visibility for HR and operations teams.',
         technologies: ['Laravel', 'MySQL', 'Chart.js', 'Bootstrap'],
-        link: '#',
+        link: 'https://ikradayandra.github.io/dashboard-presensi-porto/',
         featured: true,
     },
     {
