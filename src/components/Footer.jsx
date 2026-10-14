@@ -36,7 +36,7 @@ export default function Footer() {
                             Ikra<span className="text-indigo-600 dark:text-indigo-400">.</span>
                         </a>
                         <p className="text-xs text-slate-500 dark:text-slate-500 mt-2 leading-relaxed">
-                            Web Developer · Frontend Engineer<br />Jakarta Selatan, Indonesia
+                            Technical Writer · Web Developer<br />Jakarta Selatan, Indonesia
                         </p>
                     </div>
 

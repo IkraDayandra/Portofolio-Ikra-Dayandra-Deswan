@@ -25,7 +25,7 @@ export default function SkillGrid() {
                         Technical Skills
                     </h2>
                     <p className="mt-3 text-slate-500 dark:text-slate-400 text-sm max-w-xl">
-                        A comprehensive toolkit for building robust, user-friendly web applications.
+                        Documentation skills backed by hands-on web development experience.
                     </p>
                 </motion.div>
 

@@ -26,7 +26,7 @@ export default function Projects() {
                         Featured Projects
                     </h2>
                     <p className="mt-3 text-slate-500 dark:text-slate-400 text-sm max-w-xl">
-                        Internal applications built at PERURI, serving hundreds of users across the organization.
+                        Internal web applications I built as a Web Developer Intern at PERURI.
                     </p>
                 </motion.div>
 

@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { Users, FileCheck, Wrench } from 'lucide-react';
+import { Users, FileCheck, Code } from 'lucide-react';
 import { valuePillars } from '../data/portfolio';
 
-const iconMap = { Users, FileCheck, Wrench };
+const iconMap = { Users, FileCheck, Code };
 
 const fadeUp = {
     hidden: { opacity: 0, y: 24 },

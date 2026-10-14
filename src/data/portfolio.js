@@ -2,76 +2,96 @@
 
 export const hero = {
     name: 'Ikra Dayandra Deswan',
-    techLine: 'Web Developer · Frontend Developer · React · Laravel · MySQL',
-    tagline: 'Building reliable systems, one commit at a time.',
+    techLine: 'Technical Writer · Web Developer · Laravel · React · MySQL',
+    tagline: 'Clear documentation for web applications, from requirements to user guides.',
 };
 
 export const about = {
-    text: `I'm a Computer Science graduate from BINUS University with a strong foundation in web development and technical support. Currently working as a Web Developer Intern at PERURI (Perusahaan Umum Percetakan Uang Republik Indonesia), where I develop and maintain internal applications that serve hundreds of users daily.
+    text: `I'm a Technical Writer at Peruri Digital Security (PDS) with a Computer Science degree from Bina Nusantara University and hands-on web development experience in Laravel (PHP), React, and MySQL. I document web applications for PERURI, from requirements and functional specifications to technical documentation, UAT, and user guides, working between developers and business users.
 
-My approach combines technical proficiency with a user-focused mindset. I believe great software isn't just about clean code — it's about solving real problems and making systems accessible to everyone.
-
-With experience in full-stack development using Laravel and MySQL, I'm also expanding my skill set with React to build more dynamic, modular interfaces. Beyond coding, I enjoy troubleshooting, writing clear documentation, and ensuring smooth user experiences.`,
+I read application code and APIs to keep documentation accurate and consistent with the actual system. Before moving into technical writing, I worked as a Web Developer Intern at PERURI, which gave me a working understanding of application flow from database to user interface, and that now supports my documentation work.`,
 };
 
 export const currentFocus = [
-    'Building scalable web applications with React, Laravel, and MySQL',
-    'Developing reusable React components for modern UIs',
-    'Improving system monitoring and internal tooling',
-    'Growing expertise in endpoint management and technical support',
+    'Writing and maintaining BRD, FSD, TSD, and REST API documentation for PERURI web applications',
+    'Preparing UAT scenarios, acceptance documents, and role-based user manuals',
+    'Building reusable templates and guidelines for TSD, BRD, FSD, and UAT',
+    'Keeping documentation aligned with the actual system through code, API, and database review',
 ];
 
 export const valuePillars = [
     {
         id: 1,
-        title: 'Bridge Between Users & Systems',
+        title: 'Bridge Between Teams',
         description:
-            'I translate complex technical systems into accessible, intuitive solutions that real people can use every day.',
+            'I work between the development team and PERURI business and IT users, turning discussions and requirements into documents both sides can use.',
         icon: 'Users',
     },
     {
         id: 2,
         title: 'Documentation & Validation',
         description:
-            'Clear documentation and thorough validation are non-negotiables — they keep teams aligned and systems reliable.',
+            'From BRD and FSD to UAT scenarios and user manuals, I keep documents clear, consistent, and ready for review.',
         icon: 'FileCheck',
     },
     {
         id: 3,
-        title: 'Troubleshooting Mindset',
+        title: 'Code-Aware Writing',
         description:
-            'When things break, I dig in methodically. Finding root causes and shipping fixes cleanly is part of the job.',
-        icon: 'Wrench',
+            'I review application code, API documentation, and database structure so the documentation matches how the system actually works.',
+        icon: 'Code',
     },
 ];
 
 export const experiences = [
     {
         id: 1,
+        title: 'Technical Writer',
+        company: 'Peruri Digital Security (PDS)',
+        companyFull: 'Peruri Digital Security (PDS) — a subsidiary of Perum PERURI',
+        status: 'Current',
+        date: 'May 2026 – Present',
+        location: 'Indonesia',
+        description:
+            'Documenting web applications used at PERURI, from requirements and functional specifications to technical documentation, UAT, and user guides, working between the development team and PERURI business and IT users.',
+        responsibilities: [
+            'Prepare and maintain requirement and functional documentation (BRD, FSD) and technical specifications (TSD, REST API) for web applications used at PERURI',
+            'Keep documents aligned with the actual system by reviewing application code, API documentation, and database structure',
+            'Write UAT scenarios and acceptance documents, including a 38-scenario UAT for an employee onboarding portal followed by 25 revised scenarios',
+            'Produce user-facing documentation such as five role-based user manuals and an operational handover checklist',
+            'Document project meetings, turning discussions and transcripts into structured minutes and requirement inputs',
+            'Act as a link between the development team and PERURI business and IT users',
+            'Build reusable templates and guidelines (TSD, BRD, FSD, UAT) to keep documents consistent across projects',
+        ],
+        technologies: ['BRD', 'FSD', 'TSD', 'REST API Documentation', 'UAT', 'User Manuals'],
+    },
+    {
+        id: 2,
         title: 'Web Developer Intern',
         company: 'PERURI',
         companyFull: 'Perusahaan Umum Percetakan Uang Republik Indonesia',
-        status: 'Current',
+        status: null,
         certificateFile: '/sertif-magenta-ikra.pdf',
         certificateLabel: 'View Magenta Certificate',
-        date: 'July 2025 – Present',
+        date: 'July 2025 – May 2026',
         location: 'Jakarta Selatan, Indonesia',
         description:
-            'Working in the Internal Application Development Section under the IT Division, developing and maintaining critical internal systems that streamline operations across the organization.',
+            'Worked in the Internal Application Development Section under the IT Division, developing and maintaining internal web applications such as attendance dashboards, visitor logs, and monitoring tools using Laravel (PHP) and MySQL.',
         responsibilities: [
             'Built and maintained internal dashboards (attendance / lateness monitoring)',
             'Developed visitor log / guest book internal modules',
+            'Built responsive interfaces with HTML, CSS (Bootstrap/Tailwind), and JavaScript, and frontend components in React',
             'Created and structured Change Request (CR) forms & workflows',
             'Implemented semantic search and explored RAG features for internal document search',
             'Implemented AI-assisted features (paraphrase / generate) for documentation/workflows',
-            'Conducted feature validation, comprehensive testing, and maintained technical documentation',
-            'Provided technical support and troubleshooting for internal users across multiple departments',
-            'Managed user access permissions and monitored application performance',
+            'Tested and validated features against functional requirements',
+            'Handled troubleshooting requests from internal users',
+            'Worked with technical and non-technical teams to turn operational needs into working features',
         ],
         technologies: ['Laravel (PHP)', 'MySQL', 'JavaScript', 'React', 'Bootstrap', 'Tailwind CSS', 'Git'],
     },
     {
-        id: 2,
+        id: 3,
         title: 'Business Development & Social Media Specialist Intern',
         company: 'Ramuan Jkt',
         companyFull: 'Ramuan Jkt — Kampus Merdeka Program',
@@ -93,7 +113,7 @@ export const experiences = [
         technologies: ['Social Media Management', 'E-commerce Platforms', 'Digital Marketing'],
     },
     {
-        id: 3,
+        id: 4,
         title: 'Project Development Intern',
         company: 'Kopi Langgeng',
         companyFull: 'Kopi Langgeng',
@@ -150,16 +170,20 @@ export const projects = [
 
 export const skills = [
     {
+        category: 'Documentation',
+        items: ['BRD', 'FSD', 'TSD', 'REST API Documentation', 'Meeting Minutes', 'Templates & Guidelines'],
+    },
+    {
+        category: 'Validation & Handover',
+        items: ['UAT Scenarios', 'Acceptance Documents', 'User Manuals', 'Handover Checklist'],
+    },
+    {
         category: 'Backend',
-        items: ['Laravel (PHP)'],
+        items: ['Laravel (PHP)', 'PHP'],
     },
     {
         category: 'Frontend',
         items: ['React', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
-    },
-    {
-        category: 'Programming',
-        items: ['PHP', 'JavaScript'],
     },
     {
         category: 'Database',
@@ -168,10 +192,6 @@ export const skills = [
     {
         category: 'Tools & Workflow',
         items: ['Git', 'VS Code', 'NPM', 'Composer'],
-    },
-    {
-        category: 'Support & Operations',
-        items: ['Technical Support', 'Documentation', 'System Monitoring', 'Testing & QA'],
     },
 ];
 
@@ -191,7 +211,7 @@ export const education = {
 
 export const contact = {
     title: "Let's Work Together",
-    text: "I'm always open to discussing web development projects, technical support roles, or collaboration opportunities.",
+    text: "I'm always open to discussing technical writing and documentation work, web development projects, or collaboration opportunities.",
     footerNote: 'Currently open to full-time opportunities and freelance projects.',
     email: 'ikradayandra@gmail.com',
     linkedin: 'https://www.linkedin.com/in/ikra-dayandra-deswan-5101a117a/',
