@@ -2,7 +2,7 @@
 
 export const hero = {
     name: 'Ikra Dayandra Deswan',
-    techLine: 'Technical Writer · Web Developer · Laravel · React · MySQL',
+    techLine: 'Technical Writer · Web Developer · Laravel · Express · Go · React · Vue · SQL',
     tagline: 'Clear documentation for web applications, from requirements to user guides.',
 };
 
@@ -179,15 +179,15 @@ export const skills = [
     },
     {
         category: 'Backend',
-        items: ['Laravel (PHP)', 'PHP'],
+        items: ['Laravel (PHP)', 'PHP', 'Express.js', 'Go'],
     },
     {
         category: 'Frontend',
-        items: ['React', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
+        items: ['React', 'Vue', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
     },
     {
         category: 'Database',
-        items: ['MySQL'],
+        items: ['MySQL', 'PostgreSQL', 'SQL Server'],
     },
     {
         category: 'Tools & Workflow',
